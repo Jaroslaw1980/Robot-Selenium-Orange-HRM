@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.7 on win32)" generated="20230223 14:14:39.758" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests Myinfo" source="C:\Projects\Robot Selenium Orange HRM\Tests\tests_myinfo.robot">
+<test id="s1-t1" name="Check Martial Status list values" line="67">
+<kw name="Login with valid credentials" library="AppOrangeHRM" type="SETUP">
+<kw name="Enter page" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230223 14:14:39.959" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230223 14:14:39.958" endtime="20230223 14:14:42.996"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230223 14:14:42.996" endtime="20230223 14:14:43.114"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Base_page_banner}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 14:14:43.114" endtime="20230223 14:14:43.369"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:39.958" endtime="20230223 14:14:43.369"/>
+</kw>
+<kw name="Input text into &quot;Username&quot; field" library="Login_page">
+<arg>${login_credentials}[0]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login_username_field}</arg>
+<arg>${username_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:43.370" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<status status="PASS" starttime="20230223 14:14:43.370" endtime="20230223 14:14:43.457"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:43.369" endtime="20230223 14:14:43.457"/>
+</kw>
+<kw name="Input text into &quot;Password&quot; field" library="Login_page">
+<arg>${login_credentials}[1]</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login_password_field}</arg>
+<arg>${password_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:43.458" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" starttime="20230223 14:14:43.458" endtime="20230223 14:14:43.561"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:43.458" endtime="20230223 14:14:43.561"/>
+</kw>
+<kw name="Click &quot;Login&quot; button" library="Login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:43.562" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230223 14:14:43.561" endtime="20230223 14:14:43.639"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:43.561" endtime="20230223 14:14:43.640"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:39.958" endtime="20230223 14:14:43.641"/>
+</kw>
+<kw name="Main Page validation" library="Dashboard_page">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_my_info_tab}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 14:14:43.645" endtime="20230223 14:14:44.879"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dashboard_my_info_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:44.880" level="INFO">Clicking element '//li/a/span[contains(., 'My Info')]'.</msg>
+<status status="PASS" starttime="20230223 14:14:44.879" endtime="20230223 14:14:46.150"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:43.645" endtime="20230223 14:14:46.150"/>
+</kw>
+<kw name="My Info page validation" library="My_info_page">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${my_info_page_validator}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 14:14:46.151" endtime="20230223 14:14:46.416"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:46.151" endtime="20230223 14:14:46.416"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//i[contains(@class, 'oxd-checkbox')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230223 14:14:46.418" endtime="20230223 14:14:46.782"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 14:14:46.782" endtime="20230223 14:14:46.793"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:46.794" level="INFO">Clicking element '//form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div'.</msg>
+<msg timestamp="20230223 14:14:48.046" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230223 14:14:48.047" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="oxd-select-text-input" tabindex="0" clear="false" data-v-5df604d8=""&gt;...&lt;/div&gt; is not clickable at point (854, 374). Other element would receive the click: &lt;div class="oxd-input-group__label-wrapper" data-v-2fe357a6=""&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.104)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C537D3]
+	(No symbol) [0x00BE8B81]
+	(No symbol) [0x00AEB36D]
+	(No symbol) [0x00B24E3B]
+	(No symbol) [0x00B226DB]
+	(No symbol) [0x00B1FD0B]
+	(No symbol) [0x00B1E4D8]
+	(No symbol) [0x00B13253]
+	(No symbol) [0x00B3B41C]
+	(No symbol) [0x00B12B96]
+	(No symbol) [0x00B3B774]
+	(No symbol) [0x00B51215]
+	(No symbol) [0x00B3B216]
+	(No symbol) [0x00B10D97]
+	(No symbol) [0x00B1253D]
+	GetHandleVerifier [0x00ECABF2+2510930]
+	GetHandleVerifier [0x00EF8EC1+2700065]
+	GetHandleVerifier [0x00EFC86C+2714828]
+	GetHandleVerifier [0x00D03480+645344]
+	(No symbol) [0x00BF0FD2]
+	(No symbol) [0x00BF6C68]
+	(No symbol) [0x00BF6D4B]
+	(No symbol) [0x00C00D6B]
+	BaseThreadInitThunk [0x76576BD9+25]
+	RtlGetFullPathName_UEx [0x77BE8FD2+1218]
+	RtlGetFullPathName_UEx [0x77BE8F9D+1165]
+</msg>
+<status status="FAIL" starttime="20230223 14:14:46.793" endtime="20230223 14:14:48.050"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230223 14:14:48.051" endtime="20230223 14:14:48.051"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@role='listbox']//div</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20230223 14:14:48.051" endtime="20230223 14:14:48.051"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${martial_statuses}</var>
+<arg>//div[@role='listbox']//div</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" starttime="20230223 14:14:48.051" endtime="20230223 14:14:48.051"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>${martial_statuses}</value>
+<iter>
+<var name="${element}"/>
+<kw name="Append To List" library="Collections">
+<arg>@{list_names}</arg>
+<arg>${element.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20230223 14:14:48.051" endtime="20230223 14:14:48.051"/>
+</kw>
+<status status="NOT RUN" starttime="20230223 14:14:48.051" endtime="20230223 14:14:48.051"/>
+</iter>
+<status status="NOT RUN" starttime="20230223 14:14:48.051" endtime="20230223 14:14:48.051"/>
+</for>
+<kw name="Should Be Equal" library="BuiltIn">
+<var>@{list_names}</var>
+<arg>${list_to_verify}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230223 14:14:48.052" endtime="20230223 14:14:48.052"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230223 14:14:48.052" endtime="20230223 14:14:48.052"/>
+</kw>
+<kw name="Logout and close page" library="Common" type="TEARDOWN">
+<kw name="Logout user" library="Dashboard_page">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_user_dropdown}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 14:14:48.053" endtime="20230223 14:14:48.063"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dashboard_user_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:48.064" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
+<status status="PASS" starttime="20230223 14:14:48.063" endtime="20230223 14:14:48.097"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_user_logout}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 14:14:48.097" endtime="20230223 14:14:48.544"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dashboard_user_logout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230223 14:14:48.545" level="INFO">Clicking element '//ul[@class='oxd-dropdown-menu']/li/a[contains(text(), 'Logout')]'.</msg>
+<status status="PASS" starttime="20230223 14:14:48.545" endtime="20230223 14:14:49.061"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:48.052" endtime="20230223 14:14:49.061"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230223 14:14:49.061" endtime="20230223 14:14:51.229"/>
+</kw>
+<status status="PASS" starttime="20230223 14:14:48.052" endtime="20230223 14:14:51.229"/>
+</kw>
+<tag>validation</tag>
+<status status="FAIL" starttime="20230223 14:14:39.957" endtime="20230223 14:14:51.229">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="oxd-select-text-input" tabindex="0" clear="false" data-v-5df604d8=""&gt;...&lt;/div&gt; is not clickable at point (854, 374). Other element would receive the click: &lt;div class="oxd-input-group__label-wrapper" data-v-2fe357a6=""&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.104)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00C537D3]
+	(No symbol) [0x00BE8B81]
+	(No symbol) [0x00AEB36D]
+	(No symbol) [0x00B24E3B]
+	(No symbol) [0x00B226DB]
+	(No symbol) [0x00B1FD0B]
+	(No symbol) [0x00B1E4D8]
+	(No symbol) [0x00B13253]
+	(No symbol) [0x00B3B41C]
+	(No symbol) [0x00B12B96]
+	(No symbol) [0x00B3B774]
+	(No symbol) [0x00B51215]
+	(No symbol) [0x00B3B216]
+	(No symbol) [0x00B10D97]
+	(No symbol) [0x00B1253D]
+	GetHandleVerifier [0x00ECABF2+2510930]
+	GetHandleVerifier [0x00EF8EC1+2700065]
+	GetHandleVerifier [0x00EFC86C+2714828]
+	GetHandleVerifier [0x00D03480+645344]
+	(No symbol) [0x00BF0FD2]
+	(No symbol) [0x00BF6C68]
+	(No symbol) [0x00BF6D4B]
+	(No symbol) [0x00C00D6B]
+	BaseThreadInitThunk [0x76576BD9+25]
+	RtlGetFullPathName_UEx [0x77BE8FD2+1218]
+	RtlGetFullPathName_UEx [0x77BE8F9D+1165]
+</status>
+</test>
+<status status="FAIL" starttime="20230223 14:14:39.760" endtime="20230223 14:14:51.233"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">validation</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests Myinfo">Tests Myinfo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
