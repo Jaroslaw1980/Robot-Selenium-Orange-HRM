@@ -19,7 +19,7 @@ ${BASE_URL}   https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 &{username_form}    firstname=Yaro
                 ...     middlename=B
                 ...     lastname=Baro
-                ...     nickname=Master
+                ...     nickname=baster
                 ...     employee_Id=456
                 ...     other_id=123
                 ...     drivers_license=567
@@ -41,7 +41,10 @@ Choose Personal data page and input personal data
     Input Value To MyInfo Form Field    ${my_info_firstname}    ${username_form.firstname}
     Input Value To MyInfo Form Field    ${my_info_middlename}    ${username_form.middlename}
     Input Value To MyInfo Form Field    ${my_info_lastname}    ${username_form.lastname}
-    Input Value To MyInfo Form Field    ${my_info_nickname}    ${username_form.nickname}
+
+    ${is_visible}   Run Keyword And Return Status    Element Should Be Visible       ${my_info_nickname}
+    IF  '${is_visible}'=='True'    Input Value To MyInfo Form Field    ${my_info_nickname}    ${username_form.nickname}
+
     Input Value To MyInfo Form Field    ${my_info_employee_ID}    ${username_form.employee_Id}
     Input Value To MyInfo Form Field    ${my_info_other_id}    ${username_form.other_id}
     Input Value To MyInfo Form Field    ${my_info_driverlicense}    ${username_form.drivers_license}

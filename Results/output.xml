@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.9.7 on win32)" generated="20230306 21:45:33.469" rpa="false" schemaversion="3">
-<suite id="s1" name="Tests Dashboard" source="C:\Projects\Robot Selenium Orange HRM\Tests\tests_dashboard.robot">
-<test id="s1-t1" name="Main page should contain elements" line="18">
+<robot generator="Robot 6.0.1 (Python 3.9.7 on win32)" generated="20230306 22:32:59.440" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests Myinfo" source="C:\Projects\Robot Selenium Orange HRM\Tests\tests_myinfo.robot">
+<test id="s1-t1" name="Choose Personal data page and input personal data" line="35">
 <kw name="Login with valid credentials" library="AppOrangeHRM" type="SETUP">
 <kw name="Enter page" library="Common">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230306 21:45:33.669" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:36.654"/>
+<msg timestamp="20230306 22:32:59.654" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230306 22:32:59.654" endtime="20230306 22:33:02.510"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230306 21:45:36.654" endtime="20230306 21:45:36.769"/>
+<status status="PASS" starttime="20230306 22:33:02.510" endtime="20230306 22:33:02.640"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Base_page_banner}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:36.769" endtime="20230306 21:45:36.979"/>
+<status status="PASS" starttime="20230306 22:33:02.640" endtime="20230306 22:33:02.876"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:36.980"/>
+<status status="PASS" starttime="20230306 22:32:59.654" endtime="20230306 22:33:02.876"/>
 </kw>
 <kw name="Input text into &quot;Username&quot; field" library="Login_page">
 <arg>${login_credentials}[0]</arg>
@@ -28,10 +28,10 @@
 <arg>${login_username_field}</arg>
 <arg>${username_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 21:45:36.981" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
-<status status="PASS" starttime="20230306 21:45:36.980" endtime="20230306 21:45:37.084"/>
+<msg timestamp="20230306 22:33:02.876" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<status status="PASS" starttime="20230306 22:33:02.876" endtime="20230306 22:33:02.969"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:36.980" endtime="20230306 21:45:37.084"/>
+<status status="PASS" starttime="20230306 22:33:02.876" endtime="20230306 22:33:02.969"/>
 </kw>
 <kw name="Input text into &quot;Password&quot; field" library="Login_page">
 <arg>${login_credentials}[1]</arg>
@@ -39,232 +39,534 @@
 <arg>${login_password_field}</arg>
 <arg>${password_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 21:45:37.084" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
-<status status="PASS" starttime="20230306 21:45:37.084" endtime="20230306 21:45:37.194"/>
+<msg timestamp="20230306 22:33:02.969" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" starttime="20230306 22:33:02.969" endtime="20230306 22:33:03.070"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:37.084" endtime="20230306 21:45:37.194"/>
+<status status="PASS" starttime="20230306 22:33:02.969" endtime="20230306 22:33:03.070"/>
 </kw>
 <kw name="Click &quot;Login&quot; button" library="Login_page">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${login_login_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230306 21:45:37.194" level="INFO">Clicking button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20230306 21:45:37.194" endtime="20230306 21:45:37.270"/>
+<msg timestamp="20230306 22:33:03.071" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230306 22:33:03.071" endtime="20230306 22:33:03.133"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:37.194" endtime="20230306 21:45:37.271"/>
+<status status="PASS" starttime="20230306 22:33:03.071" endtime="20230306 22:33:03.133"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:37.271"/>
+<status status="PASS" starttime="20230306 22:32:59.654" endtime="20230306 22:33:03.133"/>
 </kw>
+<kw name="Main Page validation" library="Dashboard_page">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_header_text}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:37.272" endtime="20230306 21:45:38.513"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_client_banner}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:38.513" endtime="20230306 21:45:38.527"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_search_field}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:38.527" endtime="20230306 21:45:38.541"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_admin_tab}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:38.541" endtime="20230306 21:45:38.552"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_PIM_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.563" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'PIM')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.553" endtime="20230306 21:45:38.563"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Leave_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.576" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Leave')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.563" endtime="20230306 21:45:38.576"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Time_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.587" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Time')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.576" endtime="20230306 21:45:38.587"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Recruitment_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.587" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Recruitment')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.587" endtime="20230306 21:45:38.587"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${dashboard_my_info_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.613" level="INFO">Current page contains element '//li/a/span[contains(., 'My Info')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.587" endtime="20230306 21:45:38.614"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Performance_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.628" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Performance')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.615" endtime="20230306 21:45:38.629"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Dashboard_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.641" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Dashboard')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.629" endtime="20230306 21:45:38.641"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Directory_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.651" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Directory')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.641" endtime="20230306 21:45:38.651"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Maintanance_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.663" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Maintenance')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.651" endtime="20230306 21:45:38.663"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${dashboard_Buzz_tab}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230306 21:45:38.669" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Buzz')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.663" endtime="20230306 21:45:38.669"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_user_dropdown}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:38.669" endtime="20230306 21:45:38.687"/>
+<status status="PASS" starttime="20230306 22:33:03.133" endtime="20230306 22:33:04.370"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${dashboard_user_dropdown}</arg>
+<arg>${dashboard_my_info_tab}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:45:38.687" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
-<status status="PASS" starttime="20230306 21:45:38.687" endtime="20230306 21:45:38.742"/>
+<msg timestamp="20230306 22:33:04.370" level="INFO">Clicking element '//li/a/span[contains(., 'My Info')]'.</msg>
+<status status="PASS" starttime="20230306 22:33:04.370" endtime="20230306 22:33:05.839"/>
 </kw>
+<status status="PASS" starttime="20230306 22:33:03.133" endtime="20230306 22:33:05.839"/>
+</kw>
+<kw name="My Info page validation" library="My_info_page">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_user_list}</arg>
+<arg>${my_info_page_validator}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:38.742" endtime="20230306 21:45:39.201"/>
+<status status="PASS" starttime="20230306 22:33:05.839" endtime="20230306 22:33:06.202"/>
 </kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>@{login_elements}</var>
-<arg>${dashboard_user_list}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20230306 21:45:39.223" level="INFO">@{login_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="5a785441-0df7-4423-ac3f-d943114a9615")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20230306 21:45:39.201" endtime="20230306 21:45:39.223"/>
+<status status="PASS" starttime="20230306 22:33:05.839" endtime="20230306 22:33:06.202"/>
 </kw>
-<for flavor="IN">
-<var>${item}</var>
-<value>@{login_elements}</value>
-<iter>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="5a785441-0df7-4423-ac3f-d943114a9615")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${item.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230306 21:45:39.245" level="INFO">About</msg>
-<status status="PASS" starttime="20230306 21:45:39.223" endtime="20230306 21:45:39.245"/>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_firstname}</arg>
+<arg>${username_form.firstname}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:06.203" level="INFO">Clicking element '//input[@name='firstName']'.</msg>
+<status status="PASS" starttime="20230306 22:33:06.203" endtime="20230306 22:33:07.023"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:39.223" endtime="20230306 21:45:39.245"/>
-</iter>
-<iter>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="faeaafc9-1d6c-4852-bb56-fa86d1ec7af0")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${item.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230306 21:45:39.287" level="INFO">Support</msg>
-<status status="PASS" starttime="20230306 21:45:39.245" endtime="20230306 21:45:39.287"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:07.023" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //input[@name='firstName'] element.</msg>
+<msg timestamp="20230306 22:33:07.306" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:07.306" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:07.306" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:07.326" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:07.326" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:07.023" endtime="20230306 22:33:07.359"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:39.245" endtime="20230306 21:45:39.287"/>
-</iter>
-<iter>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="48bd99aa-b85d-4e3d-acc3-71cbf4afbb68")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${item.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230306 21:45:39.304" level="INFO">Change Password</msg>
-<status status="PASS" starttime="20230306 21:45:39.287" endtime="20230306 21:45:39.304"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:07.359" level="INFO">Typing text 'Yaro' into text field '//input[@name='firstName']'.</msg>
+<status status="PASS" starttime="20230306 22:33:07.359" endtime="20230306 22:33:07.459"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:39.287" endtime="20230306 21:45:39.304"/>
-</iter>
-<iter>
-<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="e2531c66-f4ae-48d0-9409-b38800236958")&gt;</var>
-<kw name="Log" library="BuiltIn">
-<arg>${item.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230306 21:45:39.321" level="INFO">Logout</msg>
-<status status="PASS" starttime="20230306 21:45:39.304" endtime="20230306 21:45:39.321"/>
+<status status="PASS" starttime="20230306 22:33:06.203" endtime="20230306 22:33:07.459"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:39.304" endtime="20230306 21:45:39.321"/>
-</iter>
-<status status="PASS" starttime="20230306 21:45:39.223" endtime="20230306 21:45:39.321"/>
-</for>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${count list}</var>
-<arg>${dashboard_user_list}</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20230306 21:45:39.329" level="INFO">${count list} = 4</msg>
-<status status="PASS" starttime="20230306 21:45:39.321" endtime="20230306 21:45:39.329"/>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_middlename}</arg>
+<arg>${username_form.middlename}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:07.471" level="INFO">Clicking element '//input[@name='middleName']'.</msg>
+<status status="PASS" starttime="20230306 22:33:07.470" endtime="20230306 22:33:07.539"/>
 </kw>
-<kw name="Should Be Equal As Integers" library="BuiltIn">
-<arg>${count list}</arg>
-<arg>4</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<msg timestamp="20230306 21:45:39.335" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230306 21:45:39.329" endtime="20230306 21:45:39.336"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:07.539" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //input[@name='middleName'] element.</msg>
+<msg timestamp="20230306 22:33:07.860" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:07.860" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:07.860" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:07.894" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:07.894" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:07.539" endtime="20230306 22:33:07.910"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:07.910" level="INFO">Typing text 'B' into text field '//input[@name='middleName']'.</msg>
+<status status="PASS" starttime="20230306 22:33:07.910" endtime="20230306 22:33:08.020"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:07.468" endtime="20230306 22:33:08.020"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_lastname}</arg>
+<arg>${username_form.lastname}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:08.020" level="INFO">Clicking element '//input[@name='lastName']'.</msg>
+<status status="PASS" starttime="20230306 22:33:08.020" endtime="20230306 22:33:08.111"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:08.119" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //input[@name='lastName'] element.</msg>
+<msg timestamp="20230306 22:33:08.418" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:08.418" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:08.418" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:08.456" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:08.456" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:08.118" endtime="20230306 22:33:08.484"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:08.485" level="INFO">Typing text 'Baro' into text field '//input[@name='lastName']'.</msg>
+<status status="PASS" starttime="20230306 22:33:08.484" endtime="20230306 22:33:08.604"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:08.020" endtime="20230306 22:33:08.604"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${my_info_nickname}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${my_info_nickname}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230306 22:33:08.657" level="INFO">Element '//form/div//label[contains(text(), 'Nickname')]/parent::div/following-sibling::div/input' is displayed.</msg>
+<status status="PASS" starttime="20230306 22:33:08.604" endtime="20230306 22:33:08.657"/>
+</kw>
+<msg timestamp="20230306 22:33:08.657" level="INFO">${is_visible} = True</msg>
+<status status="PASS" starttime="20230306 22:33:08.604" endtime="20230306 22:33:08.657"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_visible}'=='True'">
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_nickname}</arg>
+<arg>${username_form.nickname}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:08.668" level="INFO">Clicking element '//form/div//label[contains(text(), 'Nickname')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:08.666" endtime="20230306 22:33:08.744"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:08.744" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form/div//label[contains(text(), 'Nickname')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:09.025" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:09.025" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:09.025" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:09.043" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:09.043" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:08.744" endtime="20230306 22:33:09.058"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:09.058" level="INFO">Typing text 'baster' into text field '//form/div//label[contains(text(), 'Nickname')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:09.058" endtime="20230306 22:33:09.167"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:08.657" endtime="20230306 22:33:09.167"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:08.657" endtime="20230306 22:33:09.167"/>
+</branch>
+<status status="PASS" starttime="20230306 22:33:08.657" endtime="20230306 22:33:09.167"/>
+</if>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_employee_ID}</arg>
+<arg>${username_form.employee_Id}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:09.169" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'Employee Id')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:09.169" endtime="20230306 22:33:09.234"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:09.234" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'Employee Id')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:09.550" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:09.550" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:09.550" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:09.570" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:09.570" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:09.234" endtime="20230306 22:33:09.584"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:09.584" level="INFO">Typing text '456' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'Employee Id')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:09.584" endtime="20230306 22:33:09.691"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:09.167" endtime="20230306 22:33:09.691"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_other_id}</arg>
+<arg>${username_form.other_id}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:09.699" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'Other Id')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:09.699" endtime="20230306 22:33:09.775"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:09.783" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'Other Id')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:10.083" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:10.083" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:10.083" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:10.099" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:10.099" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:09.775" endtime="20230306 22:33:10.118"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:10.118" level="INFO">Typing text '123' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'Other Id')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:10.118" endtime="20230306 22:33:10.216"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:09.691" endtime="20230306 22:33:10.216"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_driverlicense}</arg>
+<arg>${username_form.drivers_license}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:10.216" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'Driver')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:10.216" endtime="20230306 22:33:10.302"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:10.302" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'Driver')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:10.589" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:10.589" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:10.589" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:10.607" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:10.607" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:10.302" endtime="20230306 22:33:10.632"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:10.632" level="INFO">Typing text '567' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'Driver')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:10.632" endtime="20230306 22:33:10.733"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:10.216" endtime="20230306 22:33:10.734"/>
+</kw>
+<kw name="Input License Expiry Date" library="My_info_page">
+<arg>${username_form.license_expiry_date}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_licensedate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:10.734" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'License Expiry Date')]/parent::div/following-sibling::div//input'.</msg>
+<status status="PASS" starttime="20230306 22:33:10.734" endtime="20230306 22:33:10.833"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${my_info_licensedate}</arg>
+<arg>${licensedate}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:10.833" level="INFO">Typing text '2012-12-12' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'License Expiry Date')]/parent::div/following-sibling::div//input'.</msg>
+<status status="PASS" starttime="20230306 22:33:10.833" endtime="20230306 22:33:10.958"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:10.734" endtime="20230306 22:33:10.958"/>
+</kw>
+<kw name="Choose nationality" library="My_info_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_nationality_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:10.958" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'Nationality')]/parent::div/following-sibling::div/div/div/div'.</msg>
+<status status="PASS" starttime="20230306 22:33:10.958" endtime="20230306 22:33:11.065"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_nationality}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:11.067" level="INFO">Clicking element '//div[@role='option']/span[contains(text(), 'Polish')]'.</msg>
+<status status="PASS" starttime="20230306 22:33:11.066" endtime="20230306 22:33:11.135"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:10.958" endtime="20230306 22:33:11.135"/>
+</kw>
+<kw name="Choose martial status" library="My_info_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_martial_status_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:11.135" level="INFO">Clicking element '//form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div'.</msg>
+<status status="PASS" starttime="20230306 22:33:11.135" endtime="20230306 22:33:11.208"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_martial_status}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:11.215" level="INFO">Clicking element '//div[@role='listbox']//span[contains(text(), 'Single')]'.</msg>
+<status status="PASS" starttime="20230306 22:33:11.208" endtime="20230306 22:33:11.265"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:11.135" endtime="20230306 22:33:11.265"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_ssn}</arg>
+<arg>${username_form.ssn_number}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:11.265" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'SSN Number')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:11.265" endtime="20230306 22:33:11.332"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:11.332" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'SSN Number')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:11.630" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:11.630" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:11.630" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:11.654" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:11.655" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:11.332" endtime="20230306 22:33:11.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:11.679" level="INFO">Typing text '890' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'SSN Number')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:11.671" endtime="20230306 22:33:11.792"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:11.265" endtime="20230306 22:33:11.792"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_sin}</arg>
+<arg>${username_form.sin_number}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:11.798" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'SIN Number')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:11.798" endtime="20230306 22:33:11.883"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:11.883" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'SIN Number')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:12.182" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:12.194" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:12.194" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:12.215" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:12.215" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:11.883" endtime="20230306 22:33:12.232"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:12.232" level="INFO">Typing text '098' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'SIN Number')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:12.232" endtime="20230306 22:33:12.355"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:11.792" endtime="20230306 22:33:12.355"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_dateofbirth}</arg>
+<arg>${username_form.date_of_birth}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:12.364" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'Date of Birth')]/parent::div/following-sibling::div//input'.</msg>
+<status status="PASS" starttime="20230306 22:33:12.355" endtime="20230306 22:33:12.460"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:12.460" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'Date of Birth')]/parent::div/following-sibling::div//input element.</msg>
+<msg timestamp="20230306 22:33:12.790" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:12.790" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:12.790" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:12.837" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:12.837" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:12.460" endtime="20230306 22:33:12.855"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:12.863" level="INFO">Typing text '1980-12-12' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'Date of Birth')]/parent::div/following-sibling::div//input'.</msg>
+<status status="PASS" starttime="20230306 22:33:12.855" endtime="20230306 22:33:12.984"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:12.355" endtime="20230306 22:33:12.984"/>
+</kw>
+<kw name="Choose Female" library="My_info_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_gender_female}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:12.984" level="INFO">Clicking element '(//input[@type='radio']/following-sibling::span)[2]'.</msg>
+<status status="PASS" starttime="20230306 22:33:12.984" endtime="20230306 22:33:13.069"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:12.984" endtime="20230306 22:33:13.069"/>
+</kw>
+<kw name="Choose Male" library="My_info_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_gender_male}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:13.069" level="INFO">Clicking element '(//input[@type='radio']/following-sibling::span)[1]'.</msg>
+<status status="PASS" starttime="20230306 22:33:13.069" endtime="20230306 22:33:13.150"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:13.069" endtime="20230306 22:33:13.150"/>
+</kw>
+<kw name="Click checkbox" library="My_info_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:13.150" level="INFO">Clicking element '//i[contains(@class, 'oxd-checkbox')]'.</msg>
+<status status="PASS" starttime="20230306 22:33:13.150" endtime="20230306 22:33:13.231"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:13.150" endtime="20230306 22:33:13.231"/>
+</kw>
+<kw name="Input Value to MyInfo form field" library="AppOrangeHRM">
+<arg>${my_info_military}</arg>
+<arg>${username_form.military_service}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:13.231" level="INFO">Clicking element '//form[contains(@class, 'oxd')]//label[contains(text(), 'Military Service')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:13.231" endtime="20230306 22:33:13.329"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230306 22:33:13.330" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //form[contains(@class, 'oxd')]//label[contains(text(), 'Military Service')]/parent::div/following-sibling::div/input element.</msg>
+<msg timestamp="20230306 22:33:13.627" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230306 22:33:13.627" level="INFO">Sending key a</msg>
+<msg timestamp="20230306 22:33:13.627" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230306 22:33:13.673" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230306 22:33:13.673" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230306 22:33:13.330" endtime="20230306 22:33:13.690"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${input value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:13.690" level="INFO">Typing text 'us army' into text field '//form[contains(@class, 'oxd')]//label[contains(text(), 'Military Service')]/parent::div/following-sibling::div/input'.</msg>
+<status status="PASS" starttime="20230306 22:33:13.690" endtime="20230306 22:33:13.820"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:13.231" endtime="20230306 22:33:13.820"/>
+</kw>
+<kw name="Click &quot;Save&quot; form button" library="My_info_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${my_info_click_save}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230306 22:33:13.820" level="INFO">Clicking element '(//form[contains(@class, 'oxd')]//button)[1]'.</msg>
+<status status="PASS" starttime="20230306 22:33:13.820" endtime="20230306 22:33:13.912"/>
+</kw>
+<status status="PASS" starttime="20230306 22:33:13.820" endtime="20230306 22:33:13.912"/>
 </kw>
 <kw name="Logout and close page" library="Common" type="TEARDOWN">
 <kw name="Logout user" library="Dashboard_page">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${dashboard_user_dropdown}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:39.338"/>
+<status status="PASS" starttime="20230306 22:33:13.915" endtime="20230306 22:33:13.934"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${dashboard_user_dropdown}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:45:39.338" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
-<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:39.408"/>
+<msg timestamp="20230306 22:33:13.934" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
+<status status="PASS" starttime="20230306 22:33:13.934" endtime="20230306 22:33:14.002"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${dashboard_user_logout}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:45:39.409" endtime="20230306 21:45:39.416"/>
+<status status="PASS" starttime="20230306 22:33:14.002" endtime="20230306 22:33:14.479"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${dashboard_user_logout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:45:39.416" level="INFO">Clicking element '//ul[@class='oxd-dropdown-menu']/li/a[contains(text(), 'Logout')]'.</msg>
-<status status="PASS" starttime="20230306 21:45:39.416" endtime="20230306 21:45:40.102"/>
+<msg timestamp="20230306 22:33:14.481" level="INFO">Clicking element '//ul[@class='oxd-dropdown-menu']/li/a[contains(text(), 'Logout')]'.</msg>
+<status status="PASS" starttime="20230306 22:33:14.479" endtime="20230306 22:33:15.067"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:40.102"/>
+<status status="PASS" starttime="20230306 22:33:13.915" endtime="20230306 22:33:15.067"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230306 21:45:40.102" endtime="20230306 21:45:42.279"/>
+<status status="PASS" starttime="20230306 22:33:15.067" endtime="20230306 22:33:17.419"/>
 </kw>
-<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:42.279"/>
+<status status="PASS" starttime="20230306 22:33:13.915" endtime="20230306 22:33:17.419"/>
 </kw>
-<tag>Dashboard Page</tag>
-<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:42.279"/>
+<tag>MyInfoPage</tag>
+<status status="PASS" starttime="20230306 22:32:59.654" endtime="20230306 22:33:17.419"/>
 </test>
-<status status="PASS" starttime="20230306 21:45:33.485" endtime="20230306 21:45:42.283"/>
+<status status="PASS" starttime="20230306 22:32:59.456" endtime="20230306 22:33:17.419"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Dashboard Page</stat>
+<stat pass="1" fail="0" skip="0">MyInfoPage</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tests Dashboard">Tests Dashboard</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests Myinfo">Tests Myinfo</stat>
 </suite>
 </statistics>
 <errors>
