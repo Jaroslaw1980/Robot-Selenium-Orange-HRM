@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.9.7 on win32)" generated="20230306 21:25:24.901" rpa="false" schemaversion="3">
-<suite id="s1" name="Tests Myinfo" source="C:\Projects\Robot Selenium Orange HRM\Tests\tests_myinfo.robot">
-<test id="s1-t1" name="Check Martial Status list values" line="67">
+<robot generator="Robot 6.0.1 (Python 3.9.7 on win32)" generated="20230306 21:45:33.469" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests Dashboard" source="C:\Projects\Robot Selenium Orange HRM\Tests\tests_dashboard.robot">
+<test id="s1-t1" name="Main page should contain elements" line="18">
 <kw name="Login with valid credentials" library="AppOrangeHRM" type="SETUP">
 <kw name="Enter page" library="Common">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230306 21:25:25.091" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20230306 21:25:25.091" endtime="20230306 21:25:27.955"/>
+<msg timestamp="20230306 21:45:33.669" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:36.654"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230306 21:25:27.955" endtime="20230306 21:25:28.084"/>
+<status status="PASS" starttime="20230306 21:45:36.654" endtime="20230306 21:45:36.769"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Base_page_banner}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:28.084" endtime="20230306 21:25:28.320"/>
+<status status="PASS" starttime="20230306 21:45:36.769" endtime="20230306 21:45:36.979"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:25.091" endtime="20230306 21:25:28.320"/>
+<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:36.980"/>
 </kw>
 <kw name="Input text into &quot;Username&quot; field" library="Login_page">
 <arg>${login_credentials}[0]</arg>
@@ -28,10 +28,10 @@
 <arg>${login_username_field}</arg>
 <arg>${username_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:28.320" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
-<status status="PASS" starttime="20230306 21:25:28.320" endtime="20230306 21:25:28.397"/>
+<msg timestamp="20230306 21:45:36.981" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<status status="PASS" starttime="20230306 21:45:36.980" endtime="20230306 21:45:37.084"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:28.320" endtime="20230306 21:25:28.397"/>
+<status status="PASS" starttime="20230306 21:45:36.980" endtime="20230306 21:45:37.084"/>
 </kw>
 <kw name="Input text into &quot;Password&quot; field" library="Login_page">
 <arg>${login_credentials}[1]</arg>
@@ -39,205 +39,232 @@
 <arg>${login_password_field}</arg>
 <arg>${password_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:28.397" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
-<status status="PASS" starttime="20230306 21:25:28.397" endtime="20230306 21:25:28.510"/>
+<msg timestamp="20230306 21:45:37.084" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" starttime="20230306 21:45:37.084" endtime="20230306 21:45:37.194"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:28.397" endtime="20230306 21:25:28.510"/>
+<status status="PASS" starttime="20230306 21:45:37.084" endtime="20230306 21:45:37.194"/>
 </kw>
 <kw name="Click &quot;Login&quot; button" library="Login_page">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${login_login_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:28.510" level="INFO">Clicking button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20230306 21:25:28.510" endtime="20230306 21:25:29.608"/>
+<msg timestamp="20230306 21:45:37.194" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230306 21:45:37.194" endtime="20230306 21:45:37.270"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:28.510" endtime="20230306 21:25:29.608"/>
+<status status="PASS" starttime="20230306 21:45:37.194" endtime="20230306 21:45:37.271"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:25.091" endtime="20230306 21:25:29.608"/>
+<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:37.271"/>
 </kw>
-<kw name="Main Page validation" library="Dashboard_page">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${dashboard_my_info_tab}</arg>
+<arg>${dashboard_header_text}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:29.608" endtime="20230306 21:25:29.849"/>
+<status status="PASS" starttime="20230306 21:45:37.272" endtime="20230306 21:45:38.513"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_client_banner}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230306 21:45:38.513" endtime="20230306 21:45:38.527"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_search_field}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230306 21:45:38.527" endtime="20230306 21:45:38.541"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_admin_tab}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230306 21:45:38.541" endtime="20230306 21:45:38.552"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_PIM_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.563" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'PIM')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.553" endtime="20230306 21:45:38.563"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Leave_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.576" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Leave')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.563" endtime="20230306 21:45:38.576"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Time_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.587" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Time')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.576" endtime="20230306 21:45:38.587"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Recruitment_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.587" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Recruitment')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.587" endtime="20230306 21:45:38.587"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_my_info_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.613" level="INFO">Current page contains element '//li/a/span[contains(., 'My Info')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.587" endtime="20230306 21:45:38.614"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Performance_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.628" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Performance')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.615" endtime="20230306 21:45:38.629"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Dashboard_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.641" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Dashboard')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.629" endtime="20230306 21:45:38.641"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Directory_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.651" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Directory')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.641" endtime="20230306 21:45:38.651"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Maintanance_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.663" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Maintenance')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.651" endtime="20230306 21:45:38.663"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${dashboard_Buzz_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230306 21:45:38.669" level="INFO">Current page contains element '//ul[@class='oxd-main-menu']//span[contains(., 'Buzz')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.663" endtime="20230306 21:45:38.669"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dashboard_user_dropdown}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230306 21:45:38.669" endtime="20230306 21:45:38.687"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${dashboard_my_info_tab}</arg>
+<arg>${dashboard_user_dropdown}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:29.849" level="INFO">Clicking element '//li/a/span[contains(., 'My Info')]'.</msg>
-<status status="PASS" starttime="20230306 21:25:29.849" endtime="20230306 21:25:31.148"/>
-</kw>
-<status status="PASS" starttime="20230306 21:25:29.608" endtime="20230306 21:25:31.156"/>
-</kw>
-<kw name="My Info page validation" library="My_info_page">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${my_info_page_validator}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:31.157" endtime="20230306 21:25:31.474"/>
-</kw>
-<status status="PASS" starttime="20230306 21:25:31.157" endtime="20230306 21:25:31.474"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${my_info_checkbox}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20230306 21:25:31.482" endtime="20230306 21:25:31.870"/>
+<msg timestamp="20230306 21:45:38.687" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
+<status status="PASS" starttime="20230306 21:45:38.687" endtime="20230306 21:45:38.742"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${my_info_martial_status_list}</arg>
+<arg>${dashboard_user_list}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:31.872" endtime="20230306 21:25:31.884"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${my_info_martial_status_list}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:31.884" level="INFO">Clicking element '//form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div'.</msg>
-<status status="PASS" starttime="20230306 21:25:31.884" endtime="20230306 21:25:32.369"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${my_info_martial_statuses}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:32.369" endtime="20230306 21:25:32.385"/>
+<status status="PASS" starttime="20230306 21:45:38.742" endtime="20230306 21:45:39.201"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
-<var>@{martial_statuses}</var>
-<arg>${my_info_martial_statuses}</arg>
+<var>@{login_elements}</var>
+<arg>${dashboard_user_list}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20230306 21:25:32.393" level="INFO">@{martial_statuses} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="dcec6729d31cd0b7bb902de03f5274df", element="9a65703b-0dde-4f19-a9e5-27d8911303a3")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20230306 21:25:32.386" endtime="20230306 21:25:32.393"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{statuses}</var>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20230306 21:25:32.393" level="INFO">@{statuses} = [ ]</msg>
-<status status="PASS" starttime="20230306 21:25:32.393" endtime="20230306 21:25:32.393"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{list_to_verify}</var>
-<arg>-- Select --</arg>
-<arg>Single</arg>
-<arg>Married</arg>
-<arg>Other</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20230306 21:25:32.397" level="INFO">@{list_to_verify} = [ -- Select -- | Single | Married | Other ]</msg>
-<status status="PASS" starttime="20230306 21:25:32.397" endtime="20230306 21:25:32.397"/>
+<msg timestamp="20230306 21:45:39.223" level="INFO">@{login_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="5a785441-0df7-4423-ac3f-d943114a9615")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20230306 21:45:39.201" endtime="20230306 21:45:39.223"/>
 </kw>
 <for flavor="IN">
-<var>${element}</var>
-<value>@{martial_statuses}</value>
+<var>${item}</var>
+<value>@{login_elements}</value>
 <iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="dcec6729d31cd0b7bb902de03f5274df", element="9a65703b-0dde-4f19-a9e5-27d8911303a3")&gt;</var>
-<kw name="Append To List" library="Collections">
-<arg>${statuses}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230306 21:25:32.397" endtime="20230306 21:25:32.414"/>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="5a785441-0df7-4423-ac3f-d943114a9615")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${item.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230306 21:45:39.245" level="INFO">About</msg>
+<status status="PASS" starttime="20230306 21:45:39.223" endtime="20230306 21:45:39.245"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:32.397" endtime="20230306 21:25:32.414"/>
+<status status="PASS" starttime="20230306 21:45:39.223" endtime="20230306 21:45:39.245"/>
 </iter>
 <iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="dcec6729d31cd0b7bb902de03f5274df", element="b500dbdc-5c6b-49f0-8da8-8227b8150ebb")&gt;</var>
-<kw name="Append To List" library="Collections">
-<arg>${statuses}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230306 21:25:32.414" endtime="20230306 21:25:32.421"/>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="faeaafc9-1d6c-4852-bb56-fa86d1ec7af0")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${item.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230306 21:45:39.287" level="INFO">Support</msg>
+<status status="PASS" starttime="20230306 21:45:39.245" endtime="20230306 21:45:39.287"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:32.414" endtime="20230306 21:25:32.421"/>
+<status status="PASS" starttime="20230306 21:45:39.245" endtime="20230306 21:45:39.287"/>
 </iter>
 <iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="dcec6729d31cd0b7bb902de03f5274df", element="0d84e8d4-6121-40be-9eb6-c63d961d50f4")&gt;</var>
-<kw name="Append To List" library="Collections">
-<arg>${statuses}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230306 21:25:32.421" endtime="20230306 21:25:32.446"/>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="48bd99aa-b85d-4e3d-acc3-71cbf4afbb68")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${item.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230306 21:45:39.304" level="INFO">Change Password</msg>
+<status status="PASS" starttime="20230306 21:45:39.287" endtime="20230306 21:45:39.304"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:32.421" endtime="20230306 21:25:32.446"/>
+<status status="PASS" starttime="20230306 21:45:39.287" endtime="20230306 21:45:39.304"/>
 </iter>
 <iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="dcec6729d31cd0b7bb902de03f5274df", element="6f7ffd3c-2d36-4f20-9105-159bca776c9d")&gt;</var>
-<kw name="Append To List" library="Collections">
-<arg>${statuses}</arg>
-<arg>${element.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230306 21:25:32.446" endtime="20230306 21:25:32.461"/>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cced0bba307bbde97e52ed7160899aa2", element="e2531c66-f4ae-48d0-9409-b38800236958")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${item.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230306 21:45:39.321" level="INFO">Logout</msg>
+<status status="PASS" starttime="20230306 21:45:39.304" endtime="20230306 21:45:39.321"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:32.446" endtime="20230306 21:25:32.461"/>
+<status status="PASS" starttime="20230306 21:45:39.304" endtime="20230306 21:45:39.321"/>
 </iter>
-<status status="PASS" starttime="20230306 21:25:32.397" endtime="20230306 21:25:32.461"/>
+<status status="PASS" starttime="20230306 21:45:39.223" endtime="20230306 21:45:39.321"/>
 </for>
-<kw name="Log List" library="Collections">
-<arg>${statuses}</arg>
-<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
-<msg timestamp="20230306 21:25:32.461" level="INFO">List length is 4 and it contains following items:
-0: -- Select --
-1: Single
-2: Married
-3: Other</msg>
-<status status="PASS" starttime="20230306 21:25:32.461" endtime="20230306 21:25:32.461"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count list}</var>
+<arg>${dashboard_user_list}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230306 21:45:39.329" level="INFO">${count list} = 4</msg>
+<status status="PASS" starttime="20230306 21:45:39.321" endtime="20230306 21:45:39.329"/>
 </kw>
-<kw name="Log List" library="Collections">
-<arg>${list_to_verify}</arg>
-<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
-<msg timestamp="20230306 21:25:32.467" level="INFO">List length is 4 and it contains following items:
-0: -- Select --
-1: Single
-2: Married
-3: Other</msg>
-<status status="PASS" starttime="20230306 21:25:32.467" endtime="20230306 21:25:32.467"/>
-</kw>
-<kw name="Lists Should Be Equal" library="Collections">
-<arg>${statuses}</arg>
-<arg>${list_to_verify}</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" starttime="20230306 21:25:32.467" endtime="20230306 21:25:32.467"/>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${count list}</arg>
+<arg>4</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230306 21:45:39.335" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230306 21:45:39.329" endtime="20230306 21:45:39.336"/>
 </kw>
 <kw name="Logout and close page" library="Common" type="TEARDOWN">
 <kw name="Logout user" library="Dashboard_page">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${dashboard_user_dropdown}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:32.467" endtime="20230306 21:25:32.467"/>
+<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:39.338"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${dashboard_user_dropdown}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:32.479" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
-<status status="PASS" starttime="20230306 21:25:32.479" endtime="20230306 21:25:32.522"/>
+<msg timestamp="20230306 21:45:39.338" level="INFO">Clicking element '//span[@class='oxd-userdropdown-tab']'.</msg>
+<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:39.408"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${dashboard_user_logout}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230306 21:25:32.522" endtime="20230306 21:25:32.997"/>
+<status status="PASS" starttime="20230306 21:45:39.409" endtime="20230306 21:45:39.416"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${dashboard_user_logout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230306 21:25:32.997" level="INFO">Clicking element '//ul[@class='oxd-dropdown-menu']/li/a[contains(text(), 'Logout')]'.</msg>
-<status status="PASS" starttime="20230306 21:25:32.997" endtime="20230306 21:25:33.652"/>
+<msg timestamp="20230306 21:45:39.416" level="INFO">Clicking element '//ul[@class='oxd-dropdown-menu']/li/a[contains(text(), 'Logout')]'.</msg>
+<status status="PASS" starttime="20230306 21:45:39.416" endtime="20230306 21:45:40.102"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:32.467" endtime="20230306 21:25:33.652"/>
+<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:40.102"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230306 21:25:33.652" endtime="20230306 21:25:35.948"/>
+<status status="PASS" starttime="20230306 21:45:40.102" endtime="20230306 21:45:42.279"/>
 </kw>
-<status status="PASS" starttime="20230306 21:25:32.467" endtime="20230306 21:25:35.948"/>
+<status status="PASS" starttime="20230306 21:45:39.338" endtime="20230306 21:45:42.279"/>
 </kw>
-<tag>validation</tag>
-<status status="PASS" starttime="20230306 21:25:25.091" endtime="20230306 21:25:35.948"/>
+<tag>Dashboard Page</tag>
+<status status="PASS" starttime="20230306 21:45:33.669" endtime="20230306 21:45:42.279"/>
 </test>
-<status status="PASS" starttime="20230306 21:25:24.901" endtime="20230306 21:25:35.948"/>
+<status status="PASS" starttime="20230306 21:45:33.485" endtime="20230306 21:45:42.283"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">validation</stat>
+<stat pass="1" fail="0" skip="0">Dashboard Page</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tests Myinfo">Tests Myinfo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests Dashboard">Tests Dashboard</stat>
 </suite>
 </statistics>
 <errors>
