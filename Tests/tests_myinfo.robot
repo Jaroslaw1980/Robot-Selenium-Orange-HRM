@@ -11,10 +11,10 @@ Test Teardown    Logout and close page
 # robot -d Results Tests/tests_myinfo.robot
 
 *** Variables ***
-${BROWSER}=     chrome
-${BASE_URL}=    https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${BROWSER}     chrome
+${BASE_URL}   https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 
-@{login_credentials}=   Admin   admin123
+@{login_credentials}   Admin   admin123
 
 &{username_form}    firstname=Yaro
                 ...     middlename=B
@@ -28,7 +28,7 @@ ${BASE_URL}=    https://opensource-demo.orangehrmlive.com/web/index.php/auth/log
                 ...     sin_number=098
                 ...     date_of_birth=1980-12-12
                 ...     military_service=us army
-${list_to_verify}   pam      para        pam
+
 
 *** Test Cases ***
 
@@ -63,30 +63,30 @@ Choose Personal data page and input personal data
     Click "Save" Form Button
 
 
-# TODO write test for list value checking
 Check Martial Status list values
     [Tags]    validation
 
     Main Page Validation
-
     My Info Page Validation
+    Scroll Element Into View    ${my_info_checkbox}
+    Wait Until Page Contains Element    ${my_info_martial_status_list}
+    Click Element    ${my_info_martial_status_list}
+    Wait Until Page Contains Element    ${my_info_martial_statuses}
 
-    Scroll Element Into View    //i[contains(@class, 'oxd-checkbox')]
-    Wait Until Page Contains Element    //form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div
-    Click Element    //form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div
-
-    Sleep       2s
-
-    Wait Until Page Contains Element    //div[@role='listbox']//div
-
-    ${martial_statuses}     Get Webelements    //div[@role='listbox']//div
-
-    FOR    ${element}       IN      ${martial_statuses}
-              Append To List    @{list_names}      ${element.text}
+    @{martial_statuses}     Get Webelements    ${my_info_martial_statuses}
+    @{statuses}     Create List
+    @{list_to_verify}   Create list
+         ...    -- Select --
+         ...    Single
+         ...    Married
+         ...    Other
+    FOR    ${element}       IN      @{martial_statuses}
+              Append To List    ${statuses}     ${element.text}
     END
-    @{list_names}       Should Be Equal    ${list_to_verify}
+    Log List    ${statuses}
+    Log List    ${list_to_verify}
+    Lists Should Be Equal    ${statuses}    ${list_to_verify}
 
-    Sleep       3s
 
 
 

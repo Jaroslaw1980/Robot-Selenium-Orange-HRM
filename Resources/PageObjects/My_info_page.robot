@@ -18,6 +18,7 @@ ${my_info_nationality_list}     //form[contains(@class, 'oxd')]//label[contains(
 ${my_info_nationality}     //div[@role='option']/span[contains(text(), 'Polish')]
 ${my_info_martial_status_list}     //form/div//label[contains(text(), 'Marital Status')]/parent::div/following-sibling::div/div/div/div
 ${my_info_martial_status}      //div[@role='listbox']//span[contains(text(), 'Single')]
+${my_info_martial_statuses}      //div[@role='listbox']//div
 ${my_info_dateofbirth}     //form[contains(@class, 'oxd')]//label[contains(text(), 'Date of Birth')]/parent::div/following-sibling::div//input
 ${my_info_gender_male}     (//input[@type='radio']/following-sibling::span)[1]
 ${my_info_gender_female}   (//input[@type='radio']/following-sibling::span)[2]
