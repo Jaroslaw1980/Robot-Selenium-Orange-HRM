@@ -3,20 +3,16 @@ Library    SeleniumLibrary
 Resource    ../Resources/Common.robot
 Resource    ../Resources/AppOrangeHRM.robot
 Resource    ../Resources/PageObjects/Dashboard_page.robot
+Resource    ../Data/InputData.robot
 
 Test Setup    Login With Valid Credentials
 Test Teardown    Logout and close page
 
 # robot -d Results Tests/tests_dashboard.robot
-*** Variables ***
-${BROWSER}     chrome
-${BASE_URL}    https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-
-@{login_credentials}   Admin   admin123
 
 *** Test Cases ***
 Main page should contain elements
-    [Tags]    Dashboard Page
+    [Tags]    TestID:2001       DashboardPage      Smoke
 
     Wait Until Page Contains Element    ${dashboard_header_text}
 

@@ -15,3 +15,13 @@ Input Value to MyInfo form field
     Click Element    ${locator}
     Press Keys    ${locator}    CTRL+a  BACKSPACE
     Input Text    ${locator}    ${input value}
+
+Login with incorrect credentials
+    [Arguments]    ${login list}
+    FOR     ${login}      IN       @{login list}
+            Enter Page
+            Input Text Into "Username" Field    ${login[0]}
+            Input Text Into "Password" Field    ${login[1]}
+            Click "Login" Button
+            Close Browser
+    END

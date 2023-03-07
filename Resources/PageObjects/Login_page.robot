@@ -23,7 +23,7 @@ Click "Login" button
     Click Button    ${login_login_button}
 
 Error message for "Username" field
-       Page Should Contain Element    ${login_error_message_for_username}
+    Page Should Contain Element    ${login_error_message_for_username}
 
 Error message for "Password" field
     Page Should Contain Element    ${login_error_message_for_password}

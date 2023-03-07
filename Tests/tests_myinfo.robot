@@ -4,6 +4,7 @@ Library     Collections
 Resource    ../Resources/Common.robot
 Resource    ../Resources/AppOrangeHRM.robot
 Resource    ../Resources/PageObjects/My_info_page.robot
+Resource    ../Data/InputData.robot
 
 Test Setup    Login With Valid Credentials
 Test Teardown    Logout and close page
@@ -11,11 +12,6 @@ Test Teardown    Logout and close page
 # robot -d Results Tests/tests_myinfo.robot
 
 *** Variables ***
-${BROWSER}     chrome
-${BASE_URL}   https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-
-@{login_credentials}   Admin   admin123
-
 &{username_form}    firstname=Yaro
                 ...     middlename=B
                 ...     lastname=Baro
@@ -33,7 +29,7 @@ ${BASE_URL}   https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 *** Test Cases ***
 
 Choose Personal data page and input personal data
-    [Tags]      MyInfoPage
+    [Tags]     TestID:3001       MyInfoPage     Smoke
     Main Page Validation
 
     My Info Page Validation
@@ -67,7 +63,7 @@ Choose Personal data page and input personal data
 
 
 Check Martial Status list values
-    [Tags]    validation
+    [Tags]    TestID:3002      MyInfoPage       Smoke
 
     Main Page Validation
     My Info Page Validation

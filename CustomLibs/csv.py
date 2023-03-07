@@ -1,11 +1,10 @@
-import csv
+import _csv
 
 
 def read_csv_file(filename):
     data = []
-    with open(filename, 'rb') as csvfile:
-        reader = csv.reader(csvfile)
+    with open(filename) as csvfile:
+        reader = _csv.reader(csvfile)
         for row in reader:
             data.append(row)
-
     return data

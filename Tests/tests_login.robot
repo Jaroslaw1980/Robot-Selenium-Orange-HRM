@@ -3,19 +3,10 @@ Library     SeleniumLibrary
 
 Resource    ../Resources/PageObjects/Login_page.robot
 Resource    ../Resources/Common.robot
-Resource    ../Resources/DataManager.robot
-Resource    ../Resources/AppOrangeHRM.robot
+Resource    ../Data/InputData.robot
 
 Test Setup    Enter Page
 Test Teardown    Close Browser
-
-*** Variables ***
-${BROWSER}=     chrome
-${BASE_URL}=    https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-
-@{login_credentials}=   Admin   admin123
-${invalid_username}=    a
-${invalid_password}=    b
 
 # robot -d Results Tests/tests_login.robot
 
@@ -27,9 +18,6 @@ Login should succeed with valid credentials
     Click "Login" Button
     Logout User
 
-#Login with invalid credentials
-#    ${InvalidLoginScenarios} =  DataManager.Get csv data    ${INVALID_CREDENTIALS_PATH}
-#    AppOrangeHRM.Login with invalid credentials
 
 Login without "Username" and "Password" should trigger error message
     [Tags]      TestID:1002     LoginPage       Error
